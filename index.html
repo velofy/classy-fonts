@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Classy Fonts — a specimen cabinet of free type</title>
+<meta name="description" content="A curated cabinet of free typefaces, split by licence. Vendored OFL fonts you can download, plus live specimens for personal- and commercial-use faces.">
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+<link rel="stylesheet" href="assets/styles.css">
+<link rel="stylesheet" href="assets/fonts.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="./" aria-label="Classy Fonts home">
+      <span class="mk mark ring" aria-hidden="true"></span>
+      <h1>Classy&nbsp;Fonts</h1>
+      <span class="tag">a specimen cabinet</span>
+    </a>
+    <span class="spacer"></span>
+    <span class="count-pill mono" id="totalCount">—</span>
+    <button class="icon-btn" id="themeBtn" title="Toggle light / dark" aria-label="Toggle theme">◐</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="eyebrow"><span>Type to test the whole cabinet</span><span class="rule"></span><span id="heroFace">specimen</span></div>
+  <div class="tester" id="tester" contenteditable="true" spellcheck="false" role="textbox" aria-label="Preview text"
+       data-ph="Handgloves &amp; Quartz">Handgloves &amp; Quartz</div>
+  <div class="hero-note">Every face here is free. <b>Commercial-use</b> fonts render live and download as real files; <b>personal-use</b> fonts are shown as specimens linking to their designer.</div>
+</section>
+
+<nav class="controls" aria-label="Filters">
+  <div class="controls-in">
+    <div class="tabs" role="tablist">
+      <button class="tab" role="tab" id="tab-commercial" aria-selected="true" data-tab="commercial">Commercial use<span class="n" id="nCommercial">0</span></button>
+      <button class="tab" role="tab" id="tab-personal" aria-selected="false" data-tab="personal">Personal use<span class="n" id="nPersonal">0</span></button>
+    </div>
+    <div class="filters">
+      <label class="search">
+        <span class="mk mono" aria-hidden="true">find</span>
+        <input id="search" type="search" placeholder="Search name, designer, tag…" aria-label="Search fonts" autocomplete="off">
+      </label>
+      <div class="chips" id="chips" role="group" aria-label="Category"></div>
+      <label class="sizectl">size
+        <input id="size" type="range" min="30" max="120" value="50" aria-label="Specimen size">
+      </label>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap">
+  <div class="tabnote" id="tabnote"></div>
+  <div class="grid" id="grid" role="list" aria-live="polite"></div>
+</main>
+
+<div class="modal-bg" id="modalBg" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+  <div class="modal" id="modal"></div>
+</div>
+
+<footer class="foot">
+  <div class="foot-in">
+    <div>
+      <h3>What “free” means here <span class="mark ring reg" aria-hidden="true"></span></h3>
+      <p>Free to <em>use</em> and free to <em>redistribute</em> are different rights, so this cabinet keeps them separate rather than dumping every file into one folder.</p>
+      <div class="lic-key">
+        <div><span class="mark reg"></span> <b>OFL / Apache</b> — vendored in this repo as real <code>.woff2</code> + <code>.ttf</code>. Yours to download, use, and redistribute.</div>
+        <div><span class="mark reg"></span> <b>Fontshare</b> — free for personal &amp; commercial use; served live from the foundry's own CDN (their licence permits it), download from source.</div>
+        <div><span class="mark" style="color:var(--amber)"></span> <b>Personal use</b> — free for personal projects; shown as specimens, download from the designer.</div>
+      </div>
+    </div>
+    <div>
+      <h3>Colophon</h3>
+      <p class="colophon">
+        The interface is set in the cabinet's own fonts — Fraunces, Hanken Grotesk and Space Mono.<br><br>
+        Fonts gathered with <a href="https://github.com/anishfyi/curl_reap">curl_reap</a>.<br>
+        Sources: <a href="https://www.fontshare.com">Fontshare</a>, <a href="https://fonts.google.com">Google Fonts</a>, <a href="https://fontesk.com">Fontesk</a>.<br>
+        Code MIT · fonts keep their own licences.<br>
+        <a href="https://github.com/anishfyi/classy-fonts">github.com/anishfyi/classy-fonts</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
