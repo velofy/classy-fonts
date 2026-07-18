@@ -10,7 +10,7 @@
   const CAT_ORDER = ["display-serif", "editorial-serif", "display-expressive", "grotesk", "mono"];
 
   const startTab = location.hash.replace("#", "") === "personal" ? "personal" : "commercial";
-  const state = { tab: startTab, cat: "all", q: "", size: 50, text: "Handgloves & Quartz", data: null };
+  const state = { tab: startTab, cat: "all", q: "", size: 50, text: "anishfyi", data: null };
   const lit = new Set();          // activated cards (fonts requested)
   const injected = new Set();     // fontshare css already injected
 
@@ -116,7 +116,7 @@
   tester.addEventListener("input", () => {
     clearTimeout(tTimer);
     tTimer = setTimeout(() => {
-      state.text = (tester.textContent || "").trim() || "Handgloves & Quartz";
+      state.text = (tester.textContent || "").trim() || "anishfyi";
       lit.forEach((el) => { const b = $(".big", el); if (b) b.textContent = state.text; });
     }, 90);
   });
@@ -172,7 +172,7 @@
     if (f.hosting === "cdn" && !injected.has(f.cssUrl)) {
       const l = document.createElement("link"); l.rel = "stylesheet"; l.href = f.cssUrl; document.head.appendChild(l); injected.add(f.cssUrl);
     }
-    const sample = state.text || "Handgloves & Quartz";
+    const sample = state.text || "anishfyi";
     const sizes = [72, 48, 34, 24, 18];
     const weightsTxt = (f.weights && f.weights.length) ? f.weights.join(" · ") : "";
     const body = f.hosting === "image"
