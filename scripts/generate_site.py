@@ -47,8 +47,8 @@ if ital:
     ui_rules.append(f"@font-face{{font-family:'UI Display';src:url('../fonts/fraunces/{os.path.basename(ital[0])}') format('woff2');font-weight:400;font-style:italic;font-display:swap}}")
 ui_rules += ui_face("UI Sans", "hanken-grotesk", {400:("regular","normal"),500:("500","normal"),700:("700","normal")})
 ui_rules += ui_face("UI Mono", "space-mono", {400:("regular","normal"),700:("700","normal")})
-assert any("UI Sans" in r for r in ui_rules), "UI Sans face missing — check hanken-grotesk download"
-assert any("UI Mono" in r for r in ui_rules), "UI Mono face missing — check space-mono download"
+assert any("UI Sans" in r for r in ui_rules), "UI Sans face missing: check hanken-grotesk download"
+assert any("UI Mono" in r for r in ui_rules), "UI Mono face missing: check space-mono download"
 
 # ---------- OFL (local, vendored) ----------
 css_rules = []
@@ -83,7 +83,7 @@ for e in ofl:
         "download": reg_ttf, "files": files, "source": e.get("source", ""), "tags": [],
     })
 
-# ---------- Fontshare (cdn) — skip families already vendored as OFL ----------
+# ---------- Fontshare (cdn): skip families already vendored as OFL ----------
 for e in fsh:
     if e["family"].lower() in ofl_families:
         continue
@@ -97,7 +97,7 @@ for e in fsh:
 
 # ---------- Personal (image specimens) ----------
 def clean_name(n):
-    n = re.split(r"\s*[›|—\-]\s*Fontesk", n)[0]
+    n = re.split(r"\s*[›|\-]\s*Fontesk", n)[0]
     n = re.sub(r"\s*›\s*Fontesk.*$", "", n)
     n = re.sub(r"\s*(Font|Typeface)\s*$", "", n).strip()
     return n or "Untitled"

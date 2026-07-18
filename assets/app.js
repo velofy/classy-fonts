@@ -1,4 +1,4 @@
-/* Classy Fonts — specimen cabinet */
+/* Classy Fonts: specimen cabinet */
 (() => {
   "use strict";
   const $ = (s, r = document) => r.querySelector(s);
@@ -150,7 +150,7 @@
   function setTabNote() {
     const n = $("#tabnote");
     n.innerHTML = state.tab === "commercial"
-      ? `<span class="mark" style="color:var(--accent)"></span><span>Safe for commercial work, all free. Open faces are vendored in the repo as real files; Fontshare faces stream from the foundry's own CDN — click any for weights and downloads.</span>`
+      ? `<span class="mark" style="color:var(--accent)"></span><span>Safe for commercial work, all free. Open faces are vendored in the repo as real files; Fontshare faces stream from the foundry's own CDN; click any for weights and downloads.</span>`
       : `<span class="mark"></span><span>Free for <b>personal</b> projects only. Shown as specimens; click through to the designer to download. Not for commercial use without a licence from the author.</span>`;
   }
 
@@ -178,7 +178,7 @@
     const body = f.hosting === "image"
       ? `<img class="img" src="${f.specimen}" alt="${esc(f.family)} specimen" style="aspect-ratio:auto;max-height:340px">`
       : `<div class="waterfall">${sizes.map((s) => `<div style="${face};font-size:${s}px">${esc(sample)}</div>`).join("")}</div>
-         <div class="alpha" style="${face}">ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789 &amp; ? ! “ ” — @</div>`;
+         <div class="alpha" style="${face}">ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789 &amp; ? ! “ ” - @</div>`;
     const files = (f.files && f.files.length)
       ? `<div class="m-files"><h4>Download files</h4>${f.files.map((x) => `<a href="${x.ttf}" download>${x.w} · ttf ↓</a>`).join("")}</div>`
       : "";
