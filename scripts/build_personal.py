@@ -50,7 +50,7 @@ for u in font_urls:
         t = r.text
         txt = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", t))
         slug = u.rstrip("/").split("/")[-1]
-        name = re.search(r"<title>([^<|—\-]+)", t)
+        name = re.search(r"<title>([^<|\-]+)", t)
         name = htmlmod.unescape(name.group(1).strip()) if name else slug.replace("-font","").replace("-"," ").title()
         name = re.sub(r"\s*(Font|Typeface)\s*$", "", name).strip() or name
         designer = re.search(r"Designed by:\s*([A-Za-z0-9 ,\.\-&']+?)\s+(?:Follow|Support|License)", txt)
