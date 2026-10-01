@@ -1,3 +1,10 @@
+<p align="center">
+  <a href="https://velofy.co/classy-fonts/"><picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/velofy/classy-fonts/main/assets/tile-dark.svg">
+    <img alt="Classy Fonts" src="https://raw.githubusercontent.com/velofy/classy-fonts/main/assets/tile-light.svg" width="360">
+  </picture></a>
+</p>
+
 # Classy Fonts
 
 A cabinet of **324 free typefaces**, split by licence, with a live specimen gallery.
